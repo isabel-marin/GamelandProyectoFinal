@@ -1,0 +1,28 @@
+Nombre de la tienda: GameLand
+
+Base de datos:
+DATOS
+-juegos: (idjuegos, nombrejuegos, precio, descripcion)
+
+-usuarios: (idusuarios, nombreusuarios, apellido, DNI, tlf, codigoPostal, ciudad, nick, email, password, rol)
+----------------------
+
+DB4FREE:
+https://www.db4free.net/index.php?language=es
+Acceder al apartado phpMyAdmin
+Usuario: danielj
+Contraseña: 123456789
+
+EXPORTAR BBDD:
+-Clickar a la izquierda en dominionweb.
+-Una vez dentro, seleccionar arriba exportar.
+-Dentro de exportar, lo dejamos tal cual y seleccionamos mas o menos en mitad de pantalla a la derecha la opcion continuar.
+-Seleccionamos la carpeta destino de nuestra BBDD (Recomiendo donde habitualmente las guardais).
+-Click izquierdo al archivo y lo abrimos con MySQL.
+-Ya tendriamos nuestra base de datos lista para usar en nuestro MySQL.
+-------------------------
+
+
+
+
+

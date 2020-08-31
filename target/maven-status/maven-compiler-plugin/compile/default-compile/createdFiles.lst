@@ -1,0 +1,8 @@
+gameland\controlador\Login.class
+gameland\modelo\Usuario.class
+gameland\servicios\Conexion.class
+gameland\modelo\JuegoDAO.class
+gameland\modelo\UsuarioDAO.class
+gameland\modelo\Juego.class
+gameland\controlador\Controlador.class
+gameland\controlador\Logout.class
