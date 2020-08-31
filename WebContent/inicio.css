@@ -1,8 +1,10 @@
 @charset "ISO-8859-1";
 main{
     padding: 300px 20px 20px 20px;
-    background-color: white;
-    background-image: url(C:\Users\ignac\OneDrive\Documentos\GitHub\GamelandProyectoFinal\WebContent\CSS\images\fot_inicio.jpg);
+    background-image: url(./CSS/images/fot_inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  
 }
 main section{
@@ -12,6 +14,10 @@ main section{
 	  border: yellow;
 }
 	  
-.button {
-	  background-color: yellow;	
-}
+button {
+	background-color: yellow;
+    appearance: none;
+    border: none;
+    padding: 10px;
+    font-weight: 900;	
+} 	
