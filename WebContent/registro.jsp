@@ -42,8 +42,7 @@
 				<input class="input" type="password" name="password" placeholder="Contraseña" required>
 
 				<input class="submit" type="submit" value="Enviar">
-				<p>¿Ya tengo cuenta?</p>
-
+				<p><a href="login.jsp">Ya tengo cuenta</a></p>
 			</form>
 		
 
