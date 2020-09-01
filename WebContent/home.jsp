@@ -22,15 +22,32 @@
 		</nav>
 	</header>
 	<main>
-		<select>
-			<form>
-				<h1>GAMELAND</h1>
-				<label for="Registro">Registrarte </label>
-				<label for="Inicio">Iniciar Sesión </label>
-				
-				
-			</form>
-		</select>
+		<div class="section-juego">
+			<div class="item-juego">
+				<div class="image-juego-1"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-2"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-3"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-4"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-5"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-6"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-7"></div>
+			</div>
+			<div class="item-juego">
+				<div class="image-juego-8"></div>
+			</div>
+		</div>
 	</main>
 	<footer></footer>
 	</body>
