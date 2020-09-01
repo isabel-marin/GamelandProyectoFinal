@@ -35,7 +35,7 @@ public class Logout extends HttpServlet {
 			
 			session.invalidate();
 			RequestDispatcher dispatcher = request.getRequestDispatcher("inicio.jsp");
-			dispatcher.forward(request, response);
+			dispatcher.forward(request, response); //Comentario borrarlo
 		}
 	}
 
