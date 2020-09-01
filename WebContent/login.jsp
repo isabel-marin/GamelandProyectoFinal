@@ -17,7 +17,7 @@
 		</nav>		
 	</header>
 	
-	<form action="home.jsp" method="post">
+	<form action="Login.java" method="post">
 
         <h1>Login</h1>
         <input class="input" type="text" name="name" placeholder="Usuario o Email" required>
