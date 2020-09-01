@@ -18,7 +18,7 @@
 			<hr></hr>
 			<br>
 
-			<form action="#" method="post">
+			<form action="login.jsp" method="post">
 
 				<h1>Registro</h1>
 
