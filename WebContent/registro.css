@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-
 body{
     margin: 0;
     padding: 0;
@@ -11,11 +10,12 @@ body{
 form{
     width: 700px;
     height: 400px;
+    
     background: #191919;
     padding: 40px;
     margin: auto;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-family: sans-serif;
@@ -31,7 +31,7 @@ form h1{
 }
 
 form input[type="text"], input[type="password"], input[type="email"]{
-width: 225px;
+width: 205px;
 background: none;
 padding: 10px;
 border-radius: 24px;
@@ -39,6 +39,7 @@ border: 2px solid #3498bd;
 margin-bottom: 25px;
 text-align: center;
 font-family: sans-serif;
+transition: 0.25s;
 }
 
 form input[type = "text"]:focus, form input[type ="password"]:focus, input[type="email"]:focus{

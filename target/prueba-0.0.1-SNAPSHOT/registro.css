@@ -1,2 +1,80 @@
 @charset "ISO-8859-1";
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+form{
+    width: 950px;
+    height: 400px;
+    background: #191919;
+    padding: 40px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    /* text-align: center; */
+
+}
+
+form h1{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+form input[type="text"], input[type="password"], input[type="email"]{
+width: 225px;
+background: none;
+padding: 10px;
+border-radius: 24px;
+border: 2px solid #3498bd;
+margin-bottom: 25px;
+text-align: center;
+font-family: sans-serif;
+}
+
+form input[type = "text"]:focus, form input[type ="password"]:focus, input[type="email"]:focus{
+
+border: 2px solid #2ecc71;
+
+}
+form input[type = "submit"]{
+    width: 25%;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+form input[type = "submit"]:hover{
+    background: #2ecc71;
+    transition: 1s;
+}
+
+p{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+}
+p:hover{
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}

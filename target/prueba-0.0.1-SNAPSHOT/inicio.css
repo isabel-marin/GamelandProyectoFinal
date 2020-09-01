@@ -1,1 +1,23 @@
 @charset "ISO-8859-1";
+main{
+    padding: 300px 20px 20px 20px;
+    background-image: url(./CSS/images/fot_inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ 
+}
+main section{
+	  background-color: white;
+	  height: 100%;
+	  padding: 10px;
+	  border: yellow;
+}
+	  
+button {
+	background-color: yellow;
+    appearance: none;
+    border: none;
+    padding: 10px;
+    font-weight: 900;	
+} 	

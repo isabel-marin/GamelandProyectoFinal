@@ -4,20 +4,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="registro.css">
 <title>Registro</title>
 </head>
 <body>
 <header>
-		<nav>
-			<h1 class="logo">GAMELAND</h1>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h2>Registro</h2>
-			<hr></hr>
-			<br>
+	<nav>
+		<h1 class="logo">GAMELAND</h1>
+	</nav>		
+</header>		
+			
 
 			<form action="login.jsp" method="post">
 
@@ -47,9 +45,7 @@
 				<p>¿Ya tengo cuenta?</p>
 
 			</form>
-		</section>
-	</main>
-	<footer></footer>
+		
 
 </body>
 </html>

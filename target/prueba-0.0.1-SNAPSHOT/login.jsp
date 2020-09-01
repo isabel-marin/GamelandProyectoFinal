@@ -6,18 +6,25 @@
 <meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-<title></title>
+		<link rel="stylesheet" href="login.css">
+<title>Login</title>
 
 </head>
 <body>
 	<header>
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
-		</nav>
+		</nav>		
 	</header>
 	
-	
-	
+	<form action="home.jsp" method="post">
+
+        <h1>Login</h1>
+        <input class="input" type="text" name="name" placeholder="Usuario o Email" required>
+        <input class="input" type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" name="submit" value="Login">
+
+    </form>
 	
 </body>
 </html>
