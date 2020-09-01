@@ -30,10 +30,10 @@
 				<input class="input" type="text" name="coodigoPostal" placeholder="Codigo Postal">
 				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" placeholder="Teléfono" maxlength="9">
 				<input class="input" type="text" name="ciudad" placeholder="Ciudad">
-				<input class="input" type="text" name="nick" placeholder="Usuario">
+				<span>
 				<input class="input" type="email" name="email" placeholder="Correo" required>
 				<input class="input" type="password" name="password" placeholder="Contraseña" required>
-
+				</span>
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="login.jsp">Ya tengo cuenta</a></p>
 			</form>
