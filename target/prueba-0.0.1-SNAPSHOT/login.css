@@ -2,11 +2,13 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    
     background-color: white;
 }
 
 form{
+	font-family: sans-serif;
     width: 300px;
     padding: 40px;
     position: absolute;
@@ -18,12 +20,14 @@ form{
 }
 
 form h1{
+	font-family: sans-serif;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
 }
 
 form input[type = "text"], form input[type ="password"]{
+	font-family: sans-serif;
     border: 0;
     background: none;
     display: block;
@@ -35,6 +39,7 @@ form input[type = "text"], form input[type ="password"]{
     outline: none;
     border-radius: 24px;
     transition: 0.25s;
+    color: white;
 }
 form input[type = "text"]:focus, form input[type ="password"]:focus{
       
