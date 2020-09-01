@@ -9,7 +9,6 @@ public class Usuario {
 	private String telefono;
 	private String codigopostal;
 	private String ciudad;
-	private String nick;
 	private String email;
 	private String pass;
 	private String rol;
@@ -20,7 +19,7 @@ public class Usuario {
 	}
 
 	public Usuario(int idusuarios, String nombreusuarios, String apellidos, String dni, String telefono,
-			String codigopostal, String ciudad, String nick, String email, String pass, String rol) {
+			String codigopostal, String ciudad, String email, String pass, String rol) {
 		super();
 		this.idusuarios = idusuarios;
 		this.nombreusuarios = nombreusuarios;
@@ -29,7 +28,6 @@ public class Usuario {
 		this.telefono = telefono;
 		this.codigopostal = codigopostal;
 		this.ciudad = ciudad;
-		this.nick = nick;
 		this.email = email;
 		this.pass = pass;
 		this.rol = rol;
@@ -91,14 +89,6 @@ public class Usuario {
 		this.ciudad = ciudad;
 	}
 
-	public String getNick() {
-		return nick;
-	}
-
-	public void setNick(String nick) {
-		this.nick = nick;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -127,7 +117,7 @@ public class Usuario {
 	public String toString() {
 		return "Usuario [idusuarios=" + idusuarios + ", nombreusuarios=" + nombreusuarios + ", apellidos=" + apellidos
 				+ ", dni=" + dni + ", telefono=" + telefono + ", codigopostal=" + codigopostal + ", ciudad=" + ciudad
-				+ ", nick=" + nick + ", email=" + email + ", pass=" + pass + ", rol=" + rol + "]";
+				+ ", email=" + email + ", pass=" + pass + ", rol=" + rol + "]";
 	}
 
 }
