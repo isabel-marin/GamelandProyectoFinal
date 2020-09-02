@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="gameland.modelo.Juego"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +16,12 @@
 			<h1 class="logo">GAMELAND</h1>
 		</nav>		
 	</header>
-	<form action="Controlador.java" method="post">
+	<form action="Controlador" method="post">
 		<h1>Modificación del juego <%=session.getAttribute("nombrejuegos")%></h1>
-				<input class="input" type="text" name="idjuegos" placeholder="ID juego" required>
-				<input class="input" type="text" name="nombrejuegos" placeholder="Nombre del juego" required>
-				<input class="input" type="text" name="precio" placeholder="Precio">
-				<input class="input" type="text" name="dexcripcion" placeholder="Descripción">
+				<input class="input" type="text" name="idjuegos" value="" required>
+				<input class="input" type="text" name="nombrejuegos" value="" required>
+				<input class="input" type="text" name="precio" value="">
+				<input class="input" type="text" name="descripcion" value="">
 
 				<input class="submit" type="submit" value="Modificar">
 	
