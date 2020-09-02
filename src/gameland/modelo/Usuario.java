@@ -4,13 +4,13 @@ public class Usuario {
 	
 	private int idusuarios;
 	private String nombreusuarios;
-	private String apellidos;
-	private String dni;
-	private String telefono;
-	private String codigopostal;
+	private String apellido;
+	private String DNI;
+	private String tlf;
+	private String codigoPostal;
 	private String ciudad;
 	private String email;
-	private String pass;
+	private String password;
 	private String rol;
 	
 	public Usuario() {
@@ -18,18 +18,18 @@ public class Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Usuario(int idusuarios, String nombreusuarios, String apellidos, String dni, String telefono,
-			String codigopostal, String ciudad, String email, String pass, String rol) {
+	public Usuario(int idusuarios, String nombreusuarios, String apellido, String dNI, String tlf, String codigoPostal,
+			String ciudad, String email, String password, String rol) {
 		super();
 		this.idusuarios = idusuarios;
 		this.nombreusuarios = nombreusuarios;
-		this.apellidos = apellidos;
-		this.dni = dni;
-		this.telefono = telefono;
-		this.codigopostal = codigopostal;
+		this.apellido = apellido;
+		DNI = dNI;
+		this.tlf = tlf;
+		this.codigoPostal = codigoPostal;
 		this.ciudad = ciudad;
 		this.email = email;
-		this.pass = pass;
+		this.password = password;
 		this.rol = rol;
 	}
 
@@ -49,36 +49,36 @@ public class Usuario {
 		this.nombreusuarios = nombreusuarios;
 	}
 
-	public String getApellidos() {
-		return apellidos;
+	public String getApellido() {
+		return apellido;
 	}
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 
-	public String getDni() {
-		return dni;
+	public String getDNI() {
+		return DNI;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setDNI(String dNI) {
+		DNI = dNI;
 	}
 
-	public String getTelefono() {
-		return telefono;
+	public String getTlf() {
+		return tlf;
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public void setTlf(String tlf) {
+		this.tlf = tlf;
 	}
 
-	public String getCodigopostal() {
-		return codigopostal;
+	public String getCodigoPostal() {
+		return codigoPostal;
 	}
 
-	public void setCodigopostal(String codigopostal) {
-		this.codigopostal = codigopostal;
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
 	}
 
 	public String getCiudad() {
@@ -97,12 +97,12 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public String getPass() {
-		return pass;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getRol() {
@@ -112,12 +112,8 @@ public class Usuario {
 	public void setRol(String rol) {
 		this.rol = rol;
 	}
-
-	@Override
-	public String toString() {
-		return "Usuario [idusuarios=" + idusuarios + ", nombreusuarios=" + nombreusuarios + ", apellidos=" + apellidos
-				+ ", dni=" + dni + ", telefono=" + telefono + ", codigopostal=" + codigopostal + ", ciudad=" + ciudad
-				+ ", email=" + email + ", pass=" + pass + ", rol=" + rol + "]";
-	}
-
+	
+	
+	
+	
 }
