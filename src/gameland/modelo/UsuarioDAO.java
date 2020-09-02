@@ -76,5 +76,33 @@ public class UsuarioDAO {
 		}
 		return u;
 	}
+	
+	public Usuario getUsuario(String idusuarios) throws SQLException { //Cambios
+		
+		Usuario u = null;
+		String sql = "SELECT * FROM usuario WHERE idusuarios = ? ";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setNString(1, idusuarios);
+		
+		rs = pst.executeQuery();
+		
+		if(rs.next()) {
+			u = new Usuario();
+			u.setIdusuarios(rs.getInt("idusuarios"));
+			u.setNombreusuarios(rs.getString("nombreusuarios"));
+			u.setApellido(rs.getString("apellido"));
+			u.setDNI(rs.getString("DNI"));
+			u.setTlf(rs.getString("tlf"));
+			u.setCodigoPostal(rs.getString("codigopostal"));
+			u.setCiudad(rs.getString("ciudad"));
+			u.setEmail(rs.getString("email"));
+			u.setPassword(rs.getString("password"));
+			u.setRol(rs.getString("rol"));
+			
+		}
+		return u;
+		
+	}
 
 }
