@@ -77,13 +77,13 @@ public class UsuarioDAO {
 		return u;
 	}
 	
-	public Usuario getUsuario(String idusuarios) throws SQLException { //Cambios
+	public Usuario getUsuario(int idusuarios) throws SQLException { //Cambios
 		
 		Usuario u = null;
 		String sql = "SELECT * FROM usuario WHERE idusuarios = ? ";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
-		pst.setNString(1, idusuarios);
+		pst.setInt(1, idusuarios);
 		
 		rs = pst.executeQuery();
 		
