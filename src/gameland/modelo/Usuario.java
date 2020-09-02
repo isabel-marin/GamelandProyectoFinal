@@ -18,13 +18,13 @@ public class Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Usuario(int idusuarios, String nombreusuarios, String apellido, String dNI, String tlf, String codigoPostal,
+	public Usuario(int idusuarios, String nombreusuarios, String apellido, String DNI, String tlf, String codigoPostal,
 			String ciudad, String email, String password, String rol) {
 		super();
 		this.idusuarios = idusuarios;
 		this.nombreusuarios = nombreusuarios;
 		this.apellido = apellido;
-		DNI = dNI;
+		this.DNI = DNI;
 		this.tlf = tlf;
 		this.codigoPostal = codigoPostal;
 		this.ciudad = ciudad;
@@ -61,8 +61,8 @@ public class Usuario {
 		return DNI;
 	}
 
-	public void setDNI(String dNI) {
-		DNI = dNI;
+	public void setDNI(String DNI) {
+		this.DNI = DNI;
 	}
 
 	public String getTlf() {
