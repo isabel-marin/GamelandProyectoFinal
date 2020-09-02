@@ -46,4 +46,23 @@ public class JuegoDAO {
 		
 		pst.executeUpdate();
 	}
+	public Juego getJuego(int idjuegos) throws SQLException {
+		Juego j = null;
+		String sql =  "SELECT * FROM juegos WHERE idjuegos = ?";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setInt(1, idjuegos);
+		
+		rs = pst.executeQuery();
+		if(rs.next()) {
+			j = new Juego();
+			j.setIdjuegos(rs.getInt("idjuegos"));
+			j.setNombrejuegos(rs.getString("nombrejuegos"));
+			j.setPrecio(rs.getNString("precio"));
+			j.setDescripcion(rs.getNString("descripcion"));
+			
+		}
+		return j;
+	}
+	
 }
