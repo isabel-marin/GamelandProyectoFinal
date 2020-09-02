@@ -58,7 +58,7 @@ public class UsuarioDAO {
 	}
 	public Usuario login(String email, String password) throws SQLException {
 		Usuario u = null;
-		String usuario = "SELECT nombreusuarios, apellido, email, password, rol FROM usarios WHERE email = ? AND password = ?";
+		String usuario = "SELECT nombreusuarios, apellido, email, password, rol FROM usuarios WHERE email = ? AND password = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(usuario);
 		pst.setString(1, email);
