@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
-		String pass = request.getParameter("pass");
+		String password = request.getParameter("password");
 		
 		
 		UsuarioDAO usu = new UsuarioDAO();
@@ -53,7 +53,7 @@ public class Login extends HttpServlet {
 		
 		try {
 			
-			Usuario usuario0 = usu.login(email, pass);
+			Usuario usuario0 = usu.login(email, password);
 			
 			if(usuario0 !=null) {
 				

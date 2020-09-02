@@ -20,7 +20,7 @@
 	<form action="Login.java" method="post">
 
         <h1>Login</h1>
-        <input class="input" type="text" name="name" placeholder="Email" required>
+        <input class="input" type="text" name="email" placeholder="Email" required>
         <input class="input" type="password" name="password" placeholder="Contraseña" required>
         <input type="submit" name="submit" value="Login">
 
