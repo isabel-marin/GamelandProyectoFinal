@@ -27,63 +27,65 @@
 	background-image: url(./CSS/images/juego.jpg);
 }
 .image-juego-2{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
+	
+height: 150px;
+    width: 100%;
     background-size: contain;
-    background-repeat: no-repcontaineat;
+    background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego1.jpg);
 }
 .image-juego-3{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
-    background-size: cover;
+	
+	height: 150px;
+    width: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego2.jpg);
 }
 .image-juego-4{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
+	
+	height: 150px;
+    width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego3.jpg);
 }
 .image-juego-5{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
-    background-size: cover;
+	
+	
+	height: 150px;
+    width: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego4.jpg);
 }
 .image-juego-6{
 	
-	height: 200px;
-    width: 200px;
+	
+	height: 150px;
+    width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego5.jpg);
 }
 .image-juego-7{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
+	
+	height: 150px;
+    width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 	background-image: url(./CSS/images/juego6.jpg);
 }
 .image-juego-8{
-	display: inline-block;
-	height: 200px;
-    width: 200px;
+	
+	height: 150px;
+    width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
