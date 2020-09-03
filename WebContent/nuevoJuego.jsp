@@ -16,12 +16,13 @@
 			<h1 class="logo">GAMELAND</h1>
 		</nav>		
 	</header>
-	<form action="Controlador" method="post">
+	<form action="ControladorJuego" method="POST">
 				
 			<h1>Añadir nuevo juego</h1>
 			<input class="input" type="text" name="idjuegos" value="ID nuevo juego" required>
 			<input class="input" type="text" name="nombrejuegos" value="Nombre" required>
-			<input class="input" type="text" name="precio" value="Precio">				<input class="input" type="text" name="descripcion" value="Descripción">
+			<input class="input" type="text" name="precio" value="Precio">				
+			<input class="input" type="text" name="descripcion" value="Descripción">
 
 			<input class="submit" type="submit" value="Añadir">
 	
