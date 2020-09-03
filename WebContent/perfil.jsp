@@ -26,10 +26,10 @@
 
 	<%
 		Connection conn = Conexion.getInstance().getConnection();
-	Statement st = conn.createStatement();
-	String query = "SELECT * FROM usuario";
+		Statement st = conn.createStatement();
+		String query = "SELECT * FROM usuario";
 
-	ResultSet rs = st.executeQuery(query);
+		ResultSet rs = st.executeQuery(query);
 	%>
 
 
