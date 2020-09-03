@@ -19,103 +19,105 @@ import gameland.modelo.UsuarioDAO;
 @WebServlet("/Controlador")
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Controlador() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String opcion = request.getParameter("opcion");
-		int idusuarios = Integer.parseInt(request.getParameter("idusuarios"));
-		UsuarioDAO usDAO = new UsuarioDAO();
-		
-		Usuario u = null;
-		
-		String pagDest = "modificarUsuario.jsp";
-		
-		switch (opcion){
-			case "e":
-				try {
-					u = usDAO.getUsuario(idusuarios);
-					request.setAttribute("idusuarios", u);
-					pagDest = "modificarUsuario.jsp";
-					
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				break;
-			case "b":
-				try {
-					
-					usDAO.borrarUsuario(idusuarios);
-					
-					
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				break;
-		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
-		dispatcher.forward(request, response);
-	
-		
+	public Controlador() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
- 	
-		int idusuarios = Integer.parseInt(request.getParameter("idusuarios"));
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String opcion = request.getParameter("opcion");
+		String email = request.getParameter("email");
+		UsuarioDAO usDAO = new UsuarioDAO();
+
+		Usuario u = null;
+
+		String pagDest = "modificarUsuario.jsp";
+
+		switch (opcion) {
+		case "e":
+			try {
+				u = usDAO.getUsuario(email);
+				request.setAttribute("email", u);
+				pagDest = "modificarUsuario.jsp";
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			break;
+		case "b":
+			try {
+
+				usDAO.borrarUsuario(email);
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			break;
+		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
+		dispatcher.forward(request, response);
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String nombreusuarios = request.getParameter("nombreusuarios");
 		String apellido = request.getParameter("apellido");
 		String DNI = request.getParameter("DNI");
 		String tlf = request.getParameter("tlf");
-		String codigopostal = request.getParameter("codigopostal");
+		String codigoPostal = request.getParameter("codigoPostal");
 		String ciudad = request.getParameter("ciudad");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String rol = request.getParameter("rol");
 		String opcion = request.getParameter("opcion");
-		
+
 		Usuario u = new Usuario();
-		u.setIdusuarios(idusuarios);
+
 		u.setNombreusuarios(nombreusuarios);
 		u.setApellido(apellido);
 		u.setDNI(DNI);
 		u.setTlf(tlf);
-		u.setCodigoPostal(codigopostal);
+		u.setCodigoPostal(codigoPostal);
 		u.setCiudad(ciudad);
 		u.setEmail(email);
 		u.setPassword(password);
 		u.setRol(rol);
-		
+
 		UsuarioDAO usurDAO = new UsuarioDAO();
-		
-		String pagDest = "modificarUsuario.jsp";  // Cambiar a la conveniente o home o inicio
-		
+
+		String pagDest = "home.jsp"; // Cambiar a la conveniente o home o inicio
+
 		try {
 			if (opcion == null) {
 				usurDAO.altaUsuario(u);
-			}else {
+			} else {
 				usurDAO.modificarUsuario(u);
-				pagDest= "modificarUsuario.jsp";
+				pagDest = "modificarUsuario.jsp";
 			}
-				
-				
-			} catch (SQLException e) {
-				e.printStackTrace();
-			
-				
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
 		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
+		dispatcher.forward(request, response);
 
 	}
+
 }

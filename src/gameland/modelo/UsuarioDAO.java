@@ -14,25 +14,7 @@ public class UsuarioDAO {
 	private ResultSet rs;
 	
 	public void altaUsuario (Usuario u) throws SQLException {
-		String usuario = "INSERT INTO usuarios (idusuarios, nombreusuarios, apellido, DNI, tlf, codigoPostal, ciudad, email, password, rol) VALUES (?,?,?,?,?,?,?,?,?,?)";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(usuario);
-		pst.setInt(1, u.getIdusuarios());
-		pst.setString(2, u.getNombreusuarios());
-		pst.setString(3, u.getApellido());
-		pst.setString(4, u.getDNI());
-		pst.setString(5, u.getTlf());
-		pst.setString(6, u.getCodigoPostal());
-		pst.setString(7, u.getCiudad());
-		pst.setString(8, u.getEmail());
-		pst.setString(9, u.getPassword());
-		pst.setString(10, u.getRol());
-		
-		pst.executeLargeUpdate();
-	}
-	
-	public void modificarUsuario (Usuario u) throws SQLException {
-		String usuario = "UPDATE usuarios SET nombreusuarios = ?, apellido = ?, DNI = ?, tlf = ?, codigoPostal = ?, ciudad = ?, email = ?, password = ?, rol = ? WHERE idusuarios = ?";
+		String usuario = "INSERT INTO usuarios (nombreusuarios, apellido, DNI, tlf, codigoPostal, ciudad, email, password, rol) VALUES (?,?,?,?,?,?,?,?,?)";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(usuario);
 		pst.setString(1, u.getNombreusuarios());
@@ -44,15 +26,31 @@ public class UsuarioDAO {
 		pst.setString(7, u.getEmail());
 		pst.setString(8, u.getPassword());
 		pst.setString(9, u.getRol());
-		pst.setInt(10, u.getIdusuarios());
 		
 		pst.executeUpdate();
 	}
-	public void borrarUsuario(int idusuarios) throws SQLException {
-		String usuario = "DELETE FROM usuarios WHERE idusuarios = ?";
+	
+	public void modificarUsuario (Usuario u) throws SQLException {
+		String usuario = "UPDATE usuarios SET nombreusuarios = ?, apellido = ?, DNI = ?, tlf = ?, codigoPostal = ?, ciudad = ?, password = ?, rol = ? WHERE email = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(usuario);
-		pst.setInt(1, idusuarios);
+		pst.setString(1, u.getNombreusuarios());
+		pst.setString(2, u.getApellido());
+		pst.setString(3, u.getDNI());
+		pst.setString(4, u.getTlf());
+		pst.setString(5, u.getCodigoPostal());
+		pst.setString(6, u.getCiudad());
+		pst.setString(7, u.getPassword());
+		pst.setString(8, u.getRol());
+		pst.setString(9, u.getEmail());
+		
+		pst.executeUpdate();
+	}
+	public void borrarUsuario(String email) throws SQLException {
+		String usuario = "DELETE FROM usuarios WHERE email = ?";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(usuario);
+		pst.setString(1, email);
 		
 		pst.executeUpdate();
 	}
@@ -77,19 +75,18 @@ public class UsuarioDAO {
 		return u;
 	}
 	
-	public Usuario getUsuario(int idusuarios) throws SQLException { //Cambios
+	public Usuario getUsuario(String email) throws SQLException { //Cambios
 		
 		Usuario u = null;
-		String sql = "SELECT * FROM usuario WHERE idusuarios = ? ";
+		String sql = "SELECT * FROM usuario WHERE email = ? ";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
-		pst.setInt(1, idusuarios);
+		pst.setString(1, email);
 		
 		rs = pst.executeQuery();
 		
 		if(rs.next()) {
 			u = new Usuario();
-			u.setIdusuarios(rs.getInt("idusuarios"));
 			u.setNombreusuarios(rs.getString("nombreusuarios"));
 			u.setApellido(rs.getString("apellido"));
 			u.setDNI(rs.getString("DNI"));

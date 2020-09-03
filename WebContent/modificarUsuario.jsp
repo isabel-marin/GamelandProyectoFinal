@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form action="Controlador.java" method="post">
+<form action="Controlador" method="post">
 
 				<h1>Modificación de usuario</h1>
 				

@@ -57,11 +57,11 @@ public class Login extends HttpServlet {
 			
 			if(usuario0 !=null) {
 				
-				pagDest = "datos.jsp";
+				pagDest = "home.jsp";
 				
 				HttpSession session = request.getSession();
 				session.setAttribute("nombreusuarios", usuario0.getNombreusuarios());
-				session.setAttribute("password", usuario0.getPassword());
+				session.setAttribute("rol", usuario0.getRol());
 				
 			} else {
 				String msgerror = "Correo o contraseña incorrecta";
