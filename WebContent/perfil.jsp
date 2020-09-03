@@ -1,6 +1,5 @@
 <%@page import="gameland.modelo.Usuario"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <%@ page import="gameland.servicios.Conexion"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"
 	rel="stylesheet">
-<title>Modificar usuario</title>
+<title>Perfil</title>
 </head>
 <body>
 	<header>
@@ -20,7 +19,7 @@
 		</nav>
 	</header>
 
-	<h2>Modificar usuario</h2>
+	<h2>Perfil</h2>
 	<hr>
 	</hr>
 	<br>
@@ -54,7 +53,7 @@
             <%
 				if (session.getAttribute("rol").equals("admin")) {
 			%>
-            <li><a href="mofificarUsuario.jsp">Añadir Usuario</a></li>
+            <li><a href="nuevoUsuario.jsp">Añadir Usuario</a></li>
             <%
 				}
             %>
@@ -65,15 +64,13 @@
 	 <table>
             <caption>Lista de usuarios</caption>
 
-            <tr>
-                <td>ID Usuario</td>
+            <tr>                
                 <td>Nombre</td>
                 <td>Apellido</td>
                 <td>DNI</td>
                 <td>Telefono</td>
                 <td>Codigo Postal</td>
                 <td>Ciudad</td>
-                <td>Nick</td>
                 <td>Email</td>
 
                 <%
@@ -86,17 +83,15 @@
             </tr>
 
             <%
-                if(session.getAttribute("id").equals(session.getAttribute("idusuarios"))){
+                if(session.getAttribute("email").equals(session.getAttribute("email"))){
             %>
             <tr>
-                <td><%=rs.getString("idusuarios") %></td>
                 <td><%=rs.getString("nombreusuarios") %></td>
                 <td><%=rs.getString("apellido") %></td>
                 <td><%=rs.getString("DNI") %></td>
                 <td><%=rs.getString("tlf") %></td>
                 <td><%=rs.getString("codigoPostal") %></td>
                 <td><%=rs.getString("ciudad") %></td>
-                <td><%=rs.getString("nick") %></td>
                 <td><%=rs.getString("email") %></td>
                 <td><%=rs.getString("password") %></td>
 
@@ -112,19 +107,17 @@
                 while(rs.next()){
             %>
             <tr>
-                <td><%=rs.getString("idusuarios") %></td>
                 <td><%=rs.getString("nombreusuarios") %></td>
                 <td><%=rs.getString("apellido") %></td>
                 <td><%=rs.getString("DNI") %></td>
                 <td><%=rs.getString("tlf") %></td>
                 <td><%=rs.getString("codigoPostal") %></td>
                 <td><%=rs.getString("ciudad") %></td>
-                <td><%=rs.getString("nick") %></td>
                 <td><%=rs.getString("email") %></td>
                 <td><%=rs.getString("password") %></td>
                 <td><i class="fas fa-edit"></i><a
-                    href="Controlador?opcion=e&codDepto=<%=rs.getString("codDepto")%>">Editar</a>-<a
-                    href="Controlador?opcion=b&codDepto=<%=rs.getString("codDepto")%>">Borrar</a></td>
+                    href="Controlador?opcion=e&codDepto=<%=rs.getString("email")%>">Editar</a>-<a
+                    href="Controlador?opcion=b&codDepto=<%=rs.getString("email")%>">Borrar</a></td>
 
             </tr>
 
@@ -143,7 +136,6 @@
 	conn.close();
 	%>
 
-	<h1><%=session.getAttribute("nombreusuario")%></h1>
 
 
 
