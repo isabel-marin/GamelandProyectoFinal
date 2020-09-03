@@ -14,10 +14,10 @@
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
 			<ul>
-			  <li><a href="home">Home</a></li>
-			  <li><a  href="http://localhost:8080/ProyectoFinalGameland/home.jsp">Juegos</a></li>
+			  <li><a href="login.jsp">Cerrar Sesion</a></li>
+			  <li><a  href="home.jsp">Juegos</a></li>
 			  <li><a href="#contact">Encuentranos</a></li>
-			  <li><a class="Perfil" href="Perfil">Perfil</a></li>
+			  <li><a class="perfil.jsp" href="Perfil">Perfil</a></li>
 			</ul>
 		</nav>
 	</header>
