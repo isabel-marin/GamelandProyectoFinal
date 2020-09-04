@@ -25,6 +25,7 @@
 			<input class="input" type="text" name="descripcion" value="Descripción">
 
 			<input class="submit" type="submit" value="Añadir">
+			<p><a href="home.jsp">Salir a inicio</a></p>
 	
 	</form>
 	
