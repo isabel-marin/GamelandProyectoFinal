@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 		<link rel="stylesheet" type="text/css" href="ubicacion.css">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">

@@ -4,19 +4,21 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 		<link rel="stylesheet" type="text/css" href="home.css">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 		<title>GAMELAND</title>
+		<meta charset="UTF-8">
 	</head>
 	<body>
 	<header>
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
 			<ul>
-			  <li><a href="login.jsp">Cerrar Sesión</a></li>
+			  <li><a href="login.jsp">Cerrar Sesion</a></li>
 			  <li><a class="active" href="home.jsp">Juegos</a></li>
-			  <li><a href="ubicacion.jsp">Encuéntranos</a></li>
+			  <li><a href="ubicacion.jsp">Encuentranos</a></li>
 			  <li><a class="perfil.jsp" href="Perfil">Perfil</a></li>
 			</ul>
 		</nav>
