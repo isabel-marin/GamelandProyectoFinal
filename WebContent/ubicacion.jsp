@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 		<link rel="stylesheet" type="text/css" href="ubicacion.css">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
@@ -15,7 +14,7 @@
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
 			<ul>
-			  <li><a href="login.jsp">Cerrar Sesion</a></li>
+			  <li><a href="login.jsp">Cerrar Sesión</a></li>
 			  <li><a  href="home.jsp">Juegos</a></li>
 			  <li><a  class="active" href="ubicacion.jsp">Encuentranos</a></li>
 			  <li><a class="perfil.jsp" href="Perfil">Perfil</a></li>
