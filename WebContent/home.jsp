@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="gameland.servicios.Conexion"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +14,12 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
+	<%
+	Connection conn = Conexion.getInstance().getConnection();
+	Statement st = conn.createStatement();
+	String query = "SELECT * FROM usuarios";
+	ResultSet rs = st.executeQuery(query);
+	%>
 	<header>
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
@@ -31,6 +39,10 @@
 				<a>Coimbra</a><br>
 				<p>40,95&euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
+			
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-2"></div>
@@ -38,6 +50,9 @@
 				<a>Dixit Odissey</a><br>
 				<p>26,99 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-3"></div>
@@ -45,6 +60,9 @@
 				<a>Virus</a><br>
 				<p>12,99 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-4"></div>
@@ -52,6 +70,9 @@
 				<a>Safranito</a><br>
 				<p>35,99 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-5"></div>
@@ -59,6 +80,9 @@
 				<a>Las Mansiones de la Locura</a><br>
 				<p>99,95 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-6"></div>
@@ -66,6 +90,9 @@
 				<a>Sushi Go Party</a><br>
 				<p>22,50 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-7"></div>
@@ -73,6 +100,9 @@
 				<a>Catan</a><br>
 				<p>35,90 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<% } %>
 			</div>
 			<div class="item-juego">
 				<div class="image-juego-8"></div>
@@ -80,6 +110,10 @@
 				<a>Ciudadelas</a><br>
 				<p>14,95 &euro;</p>
 				</strong>
+				<% if (session.getAttribute("rol").equals("admin")){ %>
+				<li><a href="modificarJuego.jsp">Modificar Juego</a></li>
+				<i class="fas fa-trash"></i>
+				<% } %>
 			</div>
 		</div>
 	</main>
