@@ -1,5 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@page import="gameland.modelo.Usuario"%>
-
 <%@ page import="gameland.servicios.Conexion"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
@@ -30,14 +31,16 @@
 		Connection conn = Conexion.getInstance().getConnection();
 		Statement st = conn.createStatement();
 		String query = "SELECT * FROM usuarios";
+		//String query = "SELECT * FROM usuarios WHERE email = ?";
 
+		//ResultSet rs2 = st.executeQuery(query2);
 		ResultSet rs = st.executeQuery(query);
 	%>
 
 
 	<h2>
 		Bienvenido
-		<%=session.getAttribute("nombreusuario")%>
+		<%=session.getAttribute("nombreusuarios")%>
 		<%
 			if (session.getAttribute("rol").equals("admin")) {
 		%>
@@ -49,22 +52,30 @@
 
 
 	</h2>
-	 <nav>
-        <ul>
-
+	
+        
+			
             <%
 				if (session.getAttribute("rol").equals("admin")) {
 			%>
-            <li>
+            <span>
             <i class="fas fa-angle-right"></i>
             <a href="nuevoUsuario.jsp">----> Añadir Usuario</a>
-            </li>
+            
             <%
-				}
+				}else {
+					%>					
+					
+		            <i class="fas fa-angle-right"></i>
+		            <a href="modificarUsuario.jsp">----> Modificar datos</a>
+		            </span>
+		            
+			<%
+			}
             %>
 
-        </ul>
-    </nav>
+        
+    
 
 	 <table>
             <caption>Lista de usuarios</caption>
@@ -89,7 +100,30 @@
 		    	%>
             </tr>       
 
-         
+         	<%
+         	if (session.getAttribute("rol").equals("visitante")){         		
+         			if(rs.next()) {    
+%>
+         			 <tr>
+                <td><%=rs.getString("nombreusuarios") %></td>
+                <td><%=rs.getString("apellido") %></td>
+                <td><%=rs.getString("DNI") %></td>
+                <td><%=rs.getString("tlf") %></td>
+                <td><%=rs.getString("codigoPostal") %></td>
+                <td><%=rs.getString("ciudad") %></td>
+                <td><%=rs.getString("email") %></td>
+                
+
+            </tr>
+         			
+         			
+         			
+         			
+         			<%
+         			}
+         		
+         	}
+         	%>
 
             <%
             if (session.getAttribute("rol").equals("admin")) {

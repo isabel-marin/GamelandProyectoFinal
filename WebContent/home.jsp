@@ -19,7 +19,7 @@
 			  <li><a href="login.jsp">Cerrar Sesion</a></li>
 			  <li><a class="active" href="home.jsp">Juegos</a></li>
 			  <li><a href="ubicacion.jsp">Encuentranos</a></li>
-			  <li><a class="perfil.jsp" href="Perfil">Perfil</a></li>
+			  <li><a class="Perfil" href="perfil.jsp">Perfil</a></li>
 			</ul>
 		</nav>
 	</header>
