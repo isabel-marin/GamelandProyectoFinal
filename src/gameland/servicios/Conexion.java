@@ -9,14 +9,14 @@ public class Conexion {
 	private static Conexion instancia;
 	private Connection connection;
 	//Base de datos en mysql
-	//private String url = "jdbc:mysql://localhost:3306/tienda?useSSL=false&serverTimezone=UTC";
-	//private String user = "root";
-	//private String password = "1234";
+	private String url = "jdbc:mysql://localhost:3306/tienda?useSSL=false&serverTimezone=UTC";
+	private String user = "root";
+	private String password = "1234";
 
 	//Base de datos en db4free
-	private String url = "jdbc:mysql://db4free.net:3306/dominionweb?useSSL=false&serverTimezone=UTC";
-	private String user = "danielj";
-	private String password = "123456789";
+	//private String url = "jdbc:mysql://db4free.net:3306/dominionweb?useSSL=false&serverTimezone=UTC";
+	//private String user = "danielj";
+	//private String password = "123456789";
 	
 
 	private Conexion() throws SQLException {

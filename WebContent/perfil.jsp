@@ -30,10 +30,8 @@
 	
 		Connection conn = Conexion.getInstance().getConnection();
 		Statement st = conn.createStatement();
-		String query = "SELECT * FROM usuarios";
-		//String query = "SELECT * FROM usuarios WHERE email = ?";
-
-		//ResultSet rs2 = st.executeQuery(query2);
+		String query = "SELECT * FROM usuarios ";
+		
 		ResultSet rs = st.executeQuery(query);
 	%>
 
@@ -52,6 +50,7 @@
 
 
 	</h2>
+	
 	
         
 			
@@ -101,28 +100,32 @@
             </tr>       
 
          	<%
-         	if (session.getAttribute("rol").equals("visitante")){         		
-         			if(rs.next()) {    
+         	if (session.getAttribute("rol").equals("visitante") || (session.getAttribute("rol").equals("null")))  {   	
+         		if (rs.next()){
 %>
-         			 <tr>
-                <td><%=rs.getString("nombreusuarios") %></td>
-                <td><%=rs.getString("apellido") %></td>
-                <td><%=rs.getString("DNI") %></td>
-                <td><%=rs.getString("tlf") %></td>
-                <td><%=rs.getString("codigoPostal") %></td>
-                <td><%=rs.getString("ciudad") %></td>
-                <td><%=rs.getString("email") %></td>
-                
-
-            </tr>
+         	 <tr>
+               <td> <%=session.getAttribute("nombreusuarios")%></td>               
+               <td> <%=session.getAttribute("apellido")%></td>
+               <td> <%=session.getAttribute("DNI")%></td>
+               <td> <%=session.getAttribute("tlf")%></td>
+               <td> <%=session.getAttribute("codigoPostal")%></td>
+               <td> <%=session.getAttribute("ciudad")%></td>
+               <td> <%=session.getAttribute("email")%></td>    
+               
+              </tr>
+              
+              
+           	
+              
          			
          			
          			
          			
          			<%
-         			}
-         		
+         			
+         		}
          	}
+         	
          	%>
 
             <%
@@ -141,8 +144,8 @@
                 <td><%=rs.getString("rol") %></td>
                 
                 <td><i class="fas fa-edit"></i><a
-                    href="Controlador?opcion=e&codDepto=<%=rs.getString("email")%>">Editar</a>-<a
-                    href="Controlador?opcion=b&codDepto=<%=rs.getString("email")%>">Borrar</a></td>
+                    href="Controlador?opcion=e&email=<%=rs.getString("email")%>">Editar</a>-<a
+                    href="Controlador?opcion=b&email=<%=rs.getString("email")%>">Borrar</a></td>
 
             </tr>
 

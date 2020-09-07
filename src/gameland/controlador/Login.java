@@ -61,6 +61,12 @@ public class Login extends HttpServlet {
 				
 				HttpSession session = request.getSession();
 				session.setAttribute("nombreusuarios", usuario0.getNombreusuarios());
+				session.setAttribute("apellido", usuario0.getApellido());
+				session.setAttribute("DNI", usuario0.getDNI());
+				session.setAttribute("tlf", usuario0.getTlf());
+				session.setAttribute("codigoPostal", usuario0.getCodigoPostal());
+				session.setAttribute("ciudad", usuario0.getCiudad());
+				session.setAttribute("email", usuario0.getEmail());
 				session.setAttribute("rol", usuario0.getRol());
 				
 			} else {

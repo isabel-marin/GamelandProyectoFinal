@@ -15,7 +15,7 @@
 				<h1>Modificación de usuario</h1>
 				
 				<%
-				Usuario u = (Usuario) request.getAttribute("idusuarios");
+				Usuario u = (Usuario) request.getAttribute("email");
 				%>
 
 				

@@ -19,15 +19,15 @@
 	<form action="Controlador" method="POST">
 				
 			<h1>Añadir nuevo usuario</h1>
-			<input class="input" type="text" name="nombreUsuarios" value="Nombre" required>
-			<input class="input" type="text" name="apellido" value="Apellido" required>
-			<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" value="DNI"
+			<input class="input" type="text" name="nombreUsuarios" placeholder="Nombre" required>
+			<input class="input" type="text" name="apellido" placeholder="Apellido" required>
+			<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" placeholder="DNI"
 					maxlength="9">
-			<input class="input" type="text" name="coodigoPostal" value="Código Postal"><br>
-			<input class="input" type="text" name="tlf" pattern="[9] {0-9}" value="Teléfono" maxlength="9">
-			<input class="input" type="text" name="ciudad" value="Ciudad">
-			<input class="input" type="email" name="email" value="Email" required>
-			<input class="input" type="password" name="password" value="Contraseña" required><br>
+			<input class="input" type="text" name="coodigoPostal" placeholder="Código Postal"><br>
+			<input class="input" type="text" name="tlf" pattern="[9] {0-9}" placeholder="Teléfono" maxlength="9">
+			<input class="input" type="text" name="ciudad" placeholder="Ciudad">
+			<input class="input" type="email" name="email" placeholder="Email" required>
+			<input class="input" type="password" name="password" placeholder="Contraseña" required><br>
 			<input class="submit" type="submit" value="Añadir">
 			<p><a href="home.jsp">Salir a inicio</a></p>
 	

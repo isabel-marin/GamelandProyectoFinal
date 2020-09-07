@@ -17,7 +17,7 @@
 </header>		
 			
 
-			<form action="Controlador" method="post">
+			<form action="Controlador" method="POST">
 
 				<h1>Registro</h1>
 
@@ -32,11 +32,7 @@
 				<input class="input" type="text" name="ciudad" placeholder="Ciudad">
 				<span>
 				<input class="input" type="email" name="email" placeholder="Correo" required>
-				<input class="input" type="password" name="password" placeholder="Contraseña" required>
-				
-				
-				
-				
+				<input class="input" type="password" name="password" placeholder="Contraseña" required>				
 				</span>
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="login.jsp">Ya tengo cuenta</a></p>
