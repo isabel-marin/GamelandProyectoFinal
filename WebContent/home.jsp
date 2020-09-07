@@ -37,7 +37,11 @@
 	<main>
 	
 		<div class="section-juego">
+					<%
+						while (rs.next()) {
+					%>
 			<div class="item-juego">
+				<div class="image-juego-<%=rs.getInt("idjuegos")%>"></div>
 				<table>
 					<caption><b>JUEGOS</b></caption>
 						<tr>
@@ -46,9 +50,6 @@
 							<th>PRECIO</th>
 							<th>DESCRIPCIÓN</th>
 						</tr>
-					<%
-						while (rs.next()) {
-					%>
 					<tr>
 						<td><%=rs.getInt("idjuegos")%></td>
 						<td><%=rs.getString("nombrejuegos")%></td>
@@ -59,11 +60,11 @@
 					<% } %>
 					</tr>
 
+				</table>
+			</div>
 					<%
 						}
 					%>
-				</table>
-			</div>
 		</div>
 	</main>
 	
