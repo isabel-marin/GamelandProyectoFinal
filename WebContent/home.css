@@ -15,8 +15,10 @@
 }
 
 .section-juego .item-juego:hover{
-    transform: scale(1.25);
+    transform: scale(1.15);
+    
 }
+
 
 .image-juego-1{
 	height: 150px;

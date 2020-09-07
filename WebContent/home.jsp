@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="home.css">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 		<title>GAMELAND</title>
-		<meta charset="UTF-8">
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
@@ -43,25 +43,16 @@
 					%>
 			<div class="item-juego">
 				<div class="image-juego-<%=rs.getInt("idjuegos")%>"></div>
-				<table>
-					<caption><b>JUEGOS</b></caption>
-						<tr>
-							<th>ID JUEGOS</th>
-							<th>NOMBRE</th>
-							<th>PRECIO</th>
-							<th>DESCRIPCIÓN</th>
-						</tr>
-					<tr>
-						<td><%=rs.getInt("idjuegos")%></td>
-						<td><%=rs.getString("nombrejuegos")%></td>
-						<td><%=rs.getString("precio")%></td>
-						<td><%=rs.getString("descripcion")%></td>
-					<% if (session.getAttribute("rol").equals("admin")) { %>		
-						<td><a href="ControladorJuego?opcion=e&idjuegos=<%=rs.getInt("idjuegos") %>"><i class="fa fa-edit" aria-hidden="true"></i></a>    <a href="ControladorJuego?opcion=b&idjuegos=<%=rs.getInt("idjuegos") %>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-					<% } %>
-					</tr>
-
-				</table>
+			
+					
+				<p><%=rs.getString("nombrejuegos")%></p>
+				<strong> <p> <%=rs.getString("precio")%>&euro;</p></strong>
+				<p class="dec"><%=rs.getString("descripcion")%></p>
+				<% if (session.getAttribute("rol").equals("admin")) { %>		
+					<a href="ControladorJuego?opcion=e&idjuegos=<%=rs.getInt("idjuegos") %>"><i class="fa fa-edit" aria-hidden="true"></i></a>    
+					<a href="ControladorJuego?opcion=b&idjuegos=<%=rs.getInt("idjuegos") %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+				<% } %>
+			
 			</div>
 					<%
 						}
