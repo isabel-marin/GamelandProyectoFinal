@@ -36,6 +36,7 @@
 				</span>
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="login.jsp">Ya tengo cuenta</a></p>
+				<input id="rol" name="rol" type="hidden" value="visitante">
 			</form>
 		
 

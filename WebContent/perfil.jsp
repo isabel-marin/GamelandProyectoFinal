@@ -30,7 +30,7 @@
 	
 		Connection conn = Conexion.getInstance().getConnection();
 		Statement st = conn.createStatement();
-		String query = "SELECT * FROM usuarios ";
+		String query = "SELECT * FROM usuarios";
 		
 		ResultSet rs = st.executeQuery(query);
 	%>
@@ -113,14 +113,7 @@
                <td> <%=session.getAttribute("email")%></td>    
                
               </tr>
-              
-              
-           	
-              
-         			
-         			
-         			
-         			
+                      			
          			<%
          			
          		}
