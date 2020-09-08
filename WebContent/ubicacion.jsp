@@ -15,15 +15,15 @@
 		<nav>
 			<h1 class="logo">GAMELAND</h1>
 			<ul>
-			  <li><a href="login.jsp">Cerrar Sesión</a></li>
+			  <li><a href="login.jsp">Cerrar Sesion</a></li>
 			  <li><a  href="home.jsp">Juegos</a></li>
-			  <li><a  class="active" href="ubicacion.jsp">Encuéntranos</a></li>
+			  <li><a  class="active" href="ubicacion.jsp">Encuentranos</a></li>
 			  <li><a class="perfil.jsp" href="Perfil">Perfil</a></li>
 			</ul>
 		</nav>
 	</header>
 
-		<h3>Nos encontramos en ésta Ubicación: Calle Portugal, Nº8 </h3>
+		<h3>Nos encontramos en esta Ubicacion: Calle Portugal, Nº8 </h3>
 		<div  class="ubicacion"></div>
 		
 	
