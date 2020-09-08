@@ -21,12 +21,10 @@
 
 				<h1>Registro</h1>
 
-				<input class="input" type="text" name="nombreusuarios" placeholder="Nombre" required>
-				
+				<input class="input" type="text" name="nombreusuarios" placeholder="Nombre" required>				
 				<input class="input" type="text" name="apellido" placeholder="Apellidos" required>
 				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" placeholder="DNI"
-					maxlength="9">
-				
+					maxlength="9">				
 				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" placeholder="Teléfono" maxlength="9">
 				<input class="input" type="text" name="codigoPostal" placeholder="Codigo Postal">
 				<input class="input" type="text" name="ciudad" placeholder="Ciudad">

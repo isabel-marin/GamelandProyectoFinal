@@ -19,18 +19,17 @@
 				%>
 
 				
-				<input class="input" type="text" name="nombreUsuarios" value="<%=u.getNombreusuarios() %>" required>
-				
+				<input class="input" type="text" name="nombreusuarios" value="<%=u.getNombreusuarios() %>" required>
 				<input class="input" type="text" name="apellido" value="<%=u.getApellido() %>" required>
 				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" value="<%=u.getDNI() %>"
 					maxlength="9">
 				<input class="input" type="text" name="coodigoPostal" <%=u.getCodigoPostal() %>>
 				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" value="<%=u.getTlf() %>" maxlength="9">
-				<input class="input" type="text" name="ciudad" value="<%=u.getCiudad() %>">
-				<span>
+				<input class="input" type="text" name="ciudad" value="<%=u.getCiudad() %>">				
 				<input class="input" type="email" name="email" value="<%=u.getEmail() %>" required>
 				<input class="input" type="password" name="password" value="<%=u.getPassword() %>" required>
-				</span>
+				<input class="input" name="rol" type="text" value="<%=u.getRol() %>">
+				
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="home.jsp">Salir a inicio</a></p>
 				
