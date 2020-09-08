@@ -54,7 +54,7 @@ public class ControladorJuego extends HttpServlet {
 			case "b":
 				try {
 					jueDAO.borrarJuego(idjuegos);
-					
+					pagDest = "home.jsp";
 				} catch(SQLException e) {
 					e.printStackTrace();
 					
