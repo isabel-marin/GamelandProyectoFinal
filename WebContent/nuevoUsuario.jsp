@@ -30,6 +30,7 @@
 			<input class="input" type="password" name="password" placeholder="Contraseña" required><br>
 			<input class="submit" type="submit" value="Añadir">
 			<p><a href="home.jsp">Salir a inicio</a></p>
+			<input id="rol" name="rol" type="hidden" value="visitante">
 	
 	</form>
 

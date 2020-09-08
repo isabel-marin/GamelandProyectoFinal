@@ -33,6 +33,7 @@
 				</span>
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="home.jsp">Salir a inicio</a></p>
+				
 			</form>
 
 

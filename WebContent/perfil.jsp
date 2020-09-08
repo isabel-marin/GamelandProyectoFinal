@@ -100,7 +100,7 @@
             </tr>       
 
          	<%
-         	if (session.getAttribute("rol").equals("visitante") || (session.getAttribute("rol").equals("null")))  {   	
+         	if (session.getAttribute("rol").equals("visitante")){   	
          		if (rs.next()){
 %>
          	 <tr>

@@ -85,7 +85,7 @@ public class ControladorJuego extends HttpServlet {
 		
 		JuegoDAO juDAO = new JuegoDAO();
 		
-		String pagDest = "modificarJuego.jsp";
+		String pagDest = "home.jsp";
 		
 		try {
 			if(opcion == null) {
