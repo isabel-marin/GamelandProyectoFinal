@@ -91,9 +91,10 @@ public class ControladorJuego extends HttpServlet {
 			if(opcion == null) {
 				juDAO.altaJuego(j);
 				
+				
 			}else {
 				juDAO.modificarJuego(j);
-				pagDest = "modificarJuego.jsp";
+				
 			}
 				
 		}catch(SQLException e) {

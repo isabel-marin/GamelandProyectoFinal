@@ -56,9 +56,8 @@ public class Controlador extends HttpServlet {
 			break;
 		case "b":
 			try {
-
 				usDAO.borrarUsuario(email);
-
+				pagDest = "perfil.jsp";
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -101,14 +100,14 @@ public class Controlador extends HttpServlet {
 
 		UsuarioDAO usurDAO = new UsuarioDAO();
 
-		String pagDest = "home.jsp"; // Cambiar a la conveniente o home o inicio
+		String pagDest = "perfil.jsp"; // Cambiar a la conveniente o home o inicio
 
 		try {
 			if (opcion == null) {
 				usurDAO.altaUsuario(u);
 			} else {
 				usurDAO.modificarUsuario(u);
-				pagDest = "modificarUsuario.jsp";
+				
 			}
 
 		} catch (SQLException e) {

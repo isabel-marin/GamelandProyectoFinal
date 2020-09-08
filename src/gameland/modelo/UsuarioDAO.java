@@ -78,7 +78,7 @@ public class UsuarioDAO {
 	public Usuario getUsuario(String email) throws SQLException { //Cambios
 		
 		Usuario u = null;
-		String sql = "SELECT * FROM usuario WHERE email = ? ";
+		String sql = "SELECT * FROM usuarios WHERE email = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, email);

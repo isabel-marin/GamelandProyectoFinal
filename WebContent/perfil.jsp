@@ -59,14 +59,14 @@
 			%>
             <span>
             <i class="fas fa-angle-right"></i>
-            <a href="nuevoUsuario.jsp">----> Añadir Usuario</a>
+            <a href="registro.jsp">----> Añadir Usuario</a>
             
             <%
 				}else {
 					%>					
 					
 		            <i class="fas fa-angle-right"></i>
-		            <a href="modificarUsuario.jsp">----> Modificar datos</a>
+		            <a href="nuevo.jsp">----> Modificar datos</a>
 		            </span>
 		            
 			<%
@@ -87,12 +87,11 @@
                 <td>Codigo Postal</td>
                 <td>Ciudad</td>
                 <td>Email</td>
-
-                <%
-				if (session.getAttribute("rol").equals("admin")) {
-		    	%>
 		    	<th>Contraseña</th>
 		    	<th>Rol</th>
+		    	 <%
+				if (session.getAttribute("rol").equals("admin")) {
+		    	%>
                 <th>Acciones</th>
                 <%
 				}
@@ -110,7 +109,9 @@
                <td> <%=session.getAttribute("tlf")%></td>
                <td> <%=session.getAttribute("codigoPostal")%></td>
                <td> <%=session.getAttribute("ciudad")%></td>
-               <td> <%=session.getAttribute("email")%></td>    
+               <td> <%=session.getAttribute("email")%></td>
+               <td> <%=session.getAttribute("password")%></td>
+               <td> <%=session.getAttribute("rol")%></td>    
                
               </tr>
                       			
