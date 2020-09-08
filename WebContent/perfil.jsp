@@ -1,3 +1,4 @@
+<%@page import="gameland.modelo.UsuarioDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="gameland.modelo.Usuario"%>
@@ -28,11 +29,30 @@
 
 	<%		
 	
+		Usuario u = (Usuario) session.getAttribute("email");
+		
 		Connection conn = Conexion.getInstance().getConnection();
 		Statement st = conn.createStatement();
 		String query = "SELECT * FROM usuarios";
-		
 		ResultSet rs = st.executeQuery(query);
+		
+		String user = "SELECT * FROM usuarios WHERE email = ? ";
+		PreparedStatement pst = conn.prepareStatement(user);		
+		pst.setString(1, u.getEmail());
+		
+		
+		ResultSet rs2 = pst.executeQuery();
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
 	%>
 
 
@@ -101,16 +121,16 @@
 
          	<%
          	if (session.getAttribute("rol").equals("visitante")){   	
-         		if (rs.next()){
-%>
+         		if (rs2.next()){
+			%>
          	 <tr>
-               <td> <%=session.getAttribute("nombreusuarios")%></td>               
-               <td> <%=session.getAttribute("apellido")%></td>
-               <td> <%=session.getAttribute("DNI")%></td>
-               <td> <%=session.getAttribute("tlf")%></td>
-               <td> <%=session.getAttribute("codigoPostal")%></td>
-               <td> <%=session.getAttribute("ciudad")%></td>
-               <td> <%=session.getAttribute("email")%></td>    
+                <td><%=rs2.getString("nombreusuarios") %></td>
+                <td><%=rs2.getString("apellido") %></td>
+                <td><%=rs2.getString("DNI") %></td>
+                <td><%=rs2.getString("tlf") %></td>
+                <td><%=rs2.getString("codigoPostal") %></td>
+                <td><%=rs2.getString("ciudad") %></td>
+                <td><%=rs2.getString("email") %></td>  
                
               </tr>
                       			
