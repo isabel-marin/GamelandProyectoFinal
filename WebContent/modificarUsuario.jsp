@@ -13,7 +13,10 @@
 <body>
 <header>
 		<nav>
-			<h1 class="logo">GAMELAND</h1>
+			<div class="item-logo">
+				<div class="logo-icono"></div>
+				<h1 class="logo">GAMELAND</h1>			
+			</div>
 		</nav>		
 	</header>
 		

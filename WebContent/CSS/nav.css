@@ -5,7 +5,23 @@ nav {
     justify-content: space-between;
 }
 nav .logo {
-	margin-left: 60px;
+	margin-left: 10px;
+}
+
+nav .item-logo {
+	display: flex;
+	margin-left: 40px;
+}
+
+
+
+.logo-icono{
+	height: 60px;
+    width: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-image: url(images/gameland.png);
 }
 
 nav ul {
