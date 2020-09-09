@@ -35,7 +35,7 @@
 				<input class="input" type="text" name="apellido" value="<%=u.getApellido() %>" required>
 				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" value="<%=u.getDNI() %>"
 					maxlength="9">
-				<input class="input" type="text" name="coodigoPostal" <%=u.getCodigoPostal() %>>
+				<input class="input" type="text" name="coodigoPostal" value="<%=u.getCodigoPostal() %>">
 				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" value="<%=u.getTlf() %>" maxlength="9">
 				<input class="input" type="text" name="ciudad" value="<%=u.getCiudad() %>">				
 				<input class="input" type="email" name="email" value="<%=u.getEmail() %>" required>
