@@ -21,6 +21,12 @@
 				<div class="logo-icono"></div>
 				<h1 class="logo">GAMELAND</h1>			
 			</div>
+			<ul>
+			  <li><a href="login.jsp">Cerrar Sesion</a></li>
+			  <li><a class="active" href="home.jsp">Juegos</a></li>
+			  <li><a href="ubicacion.jsp">Encuentranos</a></li>
+			  <li><a class="Perfil" href="perfil.jsp">Perfil</a></li>
+			</ul>
 		</nav>
 	</header>
 
@@ -103,18 +109,18 @@
 
          	<%
          	if (session.getAttribute("rol").equals("visitante")){   	
-         		if (rs.next()){
+         		while (rs.next()){
 %>
          	 <tr>
-               <td> <%=session.getAttribute("nombreusuarios")%></td>               
-               <td> <%=session.getAttribute("apellido")%></td>
-               <td> <%=session.getAttribute("DNI")%></td>
-               <td> <%=session.getAttribute("tlf")%></td>
-               <td> <%=session.getAttribute("codigoPostal")%></td>
-               <td> <%=session.getAttribute("ciudad")%></td>
-               <td> <%=session.getAttribute("email")%></td>
-               <td> <%=session.getAttribute("password")%></td>
-               <td> <%=session.getAttribute("rol")%></td>    
+               <td> <%=rs.getString("nombreusuarios")%></td>               
+               <td> <%=rs.getString("apellido")%></td>
+               <td> x</td>
+               <td> x</td>
+               <td> x</td>
+               <td> x</td>
+               <td> <%=rs.getString("email")%></td>
+               <td> x</td>
+               <td> <%=rs.getString("rol")%></td>    
                
               </tr>
                       			

@@ -22,13 +22,13 @@
 				
 				<input class="input" type="text" name="nombreusuarios" value="<%=session.getAttribute("nombreusuarios")%>" required>
 				<input class="input" type="text" name="apellido" value="<%=session.getAttribute("apellido") %>" required>
-				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" value="<%=session.getAttribute("DNI") %>"
+				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" value="DNI"
 					maxlength="9">
-				<input class="input" type="text" name="codigoPostal" <%=session.getAttribute("codigoPostal") %>>
-				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" value="<%=session.getAttribute("tlf")%>" maxlength="9">
-				<input class="input" type="text" name="ciudad" value="<%=session.getAttribute("ciudad") %>">				
+				<input class="input" type="text" name="codigoPostal" value="Codigo Postal">
+				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" value="Telefono" maxlength="9">
+				<input class="input" type="text" name="ciudad" value="Ciudad">				
 				<input class="input" type="email" name="email" value="<%=session.getAttribute("email") %>" required>
-				<input class="input" type="text" name="password" value="<%=session.getAttribute("password") %>">
+				<input class="input" type="text" name="password" value="Contraseña">
 				<input class="input" type="text" name="rol" value="<%=session.getAttribute("rol") %>">
 				<input type="hidden" name="opcion" value="x">				
 				<input class="submit" type="submit" value="Enviar">
