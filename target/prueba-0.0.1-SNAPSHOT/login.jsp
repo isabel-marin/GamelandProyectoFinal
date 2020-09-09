@@ -17,14 +17,12 @@
 		</nav>		
 	</header>
 	
-	<form action="Login" method="POST">
+	<form action="Login.java" method="post">
 
         <h1>Login</h1>
-        <input class="input" type="text" name="email" placeholder="Email" required>
+        <input class="input" type="text" name="name" placeholder="Usuario o Email" required>
         <input class="input" type="password" name="password" placeholder="Contraseña" required>
         <input type="submit" name="submit" value="Login">
-        <p><a href="registro.jsp">Registro</a></p>
-        <span style="color: red"><%=request.getAttribute("msgerror") == null ? "" : request.getAttribute("msgerror")%></span>
 
     </form>
 	

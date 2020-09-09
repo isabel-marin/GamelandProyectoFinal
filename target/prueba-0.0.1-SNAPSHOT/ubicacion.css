@@ -1,9 +1,0 @@
-@charset "ISO-8859-1";
-.ubicacion {
-	background-image: url(./CSS/images/ubicacion1.jpeg);
-	height: 500px;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}

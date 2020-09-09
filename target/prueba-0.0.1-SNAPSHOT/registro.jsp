@@ -17,24 +17,25 @@
 </header>		
 			
 
-			<form action="Controlador" method="POST">
+			<form action="Controlador.java" method="post">
 
 				<h1>Registro</h1>
 
-				<input class="input" type="text" name="nombreusuarios" placeholder="Nombre" required>				
+				
+				<input class="input" type="text" name="nombreUsuarios" placeholder="Nombre" required>
+				
 				<input class="input" type="text" name="apellido" placeholder="Apellidos" required>
 				<input class="input" type="text" name="DNI" pattern="[8] {0-9} [1] {A-Z,a-z}" placeholder="DNI"
-					maxlength="9">				
+					maxlength="9">
+				<input class="input" type="text" name="coodigoPostal" placeholder="Codigo Postal">
 				<input class="input" type="text" name="tlf" pattern="[9] {0-9}" placeholder="Teléfono" maxlength="9">
-				<input class="input" type="text" name="codigoPostal" placeholder="Codigo Postal">
 				<input class="input" type="text" name="ciudad" placeholder="Ciudad">
-				<span>
+				<input class="input" type="text" name="nick" placeholder="Usuario">
 				<input class="input" type="email" name="email" placeholder="Correo" required>
-				<input class="input" type="password" name="password" placeholder="Contraseña" required>				
-				</span>
+				<input class="input" type="password" name="password" placeholder="Contraseña" required>
+
 				<input class="submit" type="submit" value="Enviar">
 				<p><a href="login.jsp">Ya tengo cuenta</a></p>
-				<input id="rol" name="rol" type="hidden" value="visitante">
 			</form>
 		
 

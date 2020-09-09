@@ -1,4 +1,3 @@
-gameland\controlador\ControladorJuego.class
 gameland\controlador\Login.class
 gameland\modelo\Usuario.class
 gameland\servicios\Conexion.class
